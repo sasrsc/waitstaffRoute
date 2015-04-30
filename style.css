@@ -1,0 +1,27 @@
+/* Styles go here */
+
+body {
+  margin-left: 10px;
+  font-family: Helvetica, Arial;
+}
+
+label {
+    vertical-align: baseline;
+}
+
+
+#content {
+	/*border: 1px solid black;*/
+	margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+    padding: 20px;
+
+
+}
+
+#new-meal, #custCharges {
+	border: 1px solid #ccc;
+	padding: 20px;
+	margin: 20px 0px;
+}

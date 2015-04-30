@@ -1,0 +1,39 @@
+
+<div id="new-meal">
+<h2>Enter the Meal Details</h2>
+<form name="thisForm" novalidate>
+
+<div class="form-group">
+  <label for="base">Base Meal Price: $</label>
+  <input type="number" name="base" ng-model="meal.base" min="5" required>
+</div>
+ 
+<div class="form-group">
+  <label for="tax">Tax Rate: %</label>
+  <input type="number" name="tax" ng-model="meal.tax" required>
+</div>
+  
+  
+<div class="form-group">
+    <label for="tip">Tip Percentage: %</label>
+    <input type="number" name="tip" ng-model="meal.tip" required>
+</div>
+  
+<button type="submit" class="btn btn-primary" ng-click="calculate(thisForm)">Calculate</button>
+<!-- <button type="button" class="btn btn-warning" ng-click="meal.base=null;meal.tip=null;meal.tax=null">Clear</button>
+ --><button type="button" class="btn btn-warning" ng-click="reset()">Clear</button>
+   
+</form>
+</div>
+
+<div id="custCharges">
+  <h2>Customer Charges</h2>
+  SubTotal: {{meal.subtotal | currency}}
+  Tip: {{meal.tip | currency}}
+  Total: {{meal.total | currency}}
+
+</div>
+
+<pre>
+Is form valid?={{thisForm.$valid}}
+</pre>
